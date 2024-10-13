@@ -1,0 +1,44 @@
+.login-container {
+    max-width: 400px; /* Максимальная ширина панели */
+    margin: 250px auto; /* Автоматические отступы по бокам и отступ сверху */
+    padding: 20px; /* Внутренний отступ */
+    border: 1px solid #ccc; /* Граница */
+    border-radius: 5px; /* Скругление углов */
+    background-color: #f9f9f9; /* Цвет фона */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для панели */
+}
+
+h2 {
+    text-align: center; /* Центрирование заголовка */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Отступ между полями */
+}
+
+label {
+    display: block; /* Метки занимают всю ширину */
+    margin-bottom: 5px; /* Отступ снизу */
+}
+
+input {
+    width: 100%; /* Поля ввода занимают всю ширину */
+    padding: 8px; /* Внутренний отступ */
+    border: 1px solid #ccc; /* Граница */
+    border-radius: 4px; /* Скругление углов */
+}
+
+button {
+    width: 100%; /* Кнопка занимает всю ширину */
+    padding: 10px; /* Внутренний отступ */
+    border: none; /* Без границы */
+    border-radius: 4px; /* Скругление углов */
+    background-color: #5cb85c; /* Цвет фона кнопки */
+    color: white; /* Цвет текста кнопки */
+    font-size: 16px; /* Размер шрифта */
+    cursor: pointer; /* Указатель курсора */
+}
+
+button:hover {
+    background-color: #4cae4c; /* Цвет фона кнопки при наведении */
+}
