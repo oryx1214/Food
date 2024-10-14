@@ -13,21 +13,22 @@ h2 {
 }
 
 .form-group {
-  margin-bottom: 15px; /* Отступ между полями */
+  margin-bottom: 5px; /* Отступ между полями */
+  
 }
 
 label {
   display: block; /* Метки занимают всю ширину */
   margin-bottom: 5px; /* Отступ снизу */
+  
 }
 
 input {
-  width: 100%; /* Поля ввода занимают всю ширину */
-  padding: 8px; /* Внутренний отступ */
-  border: 1px solid #ccc; /* Граница */
-  border-radius: 4px; /* Скругление углов */
+  width: calc(100% - 16px); /* Учитываем padding */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
-
 button {
   width: 100%; /* Кнопка занимает всю ширину */
   padding: 10px; /* Внутренний отступ */
@@ -37,8 +38,13 @@ button {
   color: white; /* Цвет текста кнопки */
   font-size: 16px; /* Размер шрифта */
   cursor: pointer; /* Указатель курсора */
+  margin-top: 15px; /* Добавьте этот отступ */
 }
 
 button:hover {
   background-color: #4cae4c; /* Цвет фона кнопки при наведении */
+}
+
+button:active{
+  background-color: #439e43;
 }
