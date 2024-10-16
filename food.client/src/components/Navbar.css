@@ -1,11 +1,14 @@
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Равномерное распределение элементов */
     align-items: center;
     padding: 10px 20px;
     background-color: #333;
     color: white;
+    height: 80px; /* Фиксированная высота для Navbar */
+    box-sizing: border-box;
 }
+
 
 .navbar-left {
     display: flex;
@@ -48,4 +51,25 @@
 
 .submit-button {
     margin-left: 10px; /* Немного отступа между логотипом и кнопкой */
+}
+
+.search-button   {
+    margin-left: 1px;
+    margin-top: 5px;
+    background-color: #fad400;
+    
+    
+}
+.search-button:hover {
+    background-color: #ffd900;
+    color: white;
+}
+
+.search-button:active {
+    background-color: #fcc100; /* Более темный зеленый цвет */
+    color: white;
+}
+.navbar-logo img {
+    max-height: 85px; /* Максимальная высота изображения */
+    width: auto; /* Сохранение пропорций изображения */
 }

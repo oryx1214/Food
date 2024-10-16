@@ -1,26 +1,31 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import SubmitButton from './SmallComponents/SubmitButton'; // Импортируем компонент кнопки
+import SubmitButton from './SmallComponents/SubmitButton';
+import logo from '../Images/logo.jpg'; // Импорт изображения
 
 const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="navbar-left">
                 <div className="navbar-logo">
-                    <Link to="/">TastyBytes</Link>
+                    <Link to="/">
+                        <img src={logo} alt="TastyBytes Logo" className="navbar-logo-img" />
+                    </Link>
                 </div>
                 <SubmitButton />
             </div>
             <div className="navbar-links">
                 <Link to="/">Главная</Link>
+                <Link to="/categories">Категории</Link>
                 <Link to="/login">Вход</Link>
                 <span> / </span>
                 <Link to="/register">Регистрация</Link>
+      
             </div>
             <div className="navbar-search">
                 <input type="text" placeholder="Поиск..." />
-                <button>Найти</button>
+                <button className="search-button">Найти</button>
             </div>
         </nav>
     );
