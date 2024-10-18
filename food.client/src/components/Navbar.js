@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import SubmitButton from './SmallComponents/SubmitButton';
-import logo from '../Images/logo.jpg'; // Импорт изображения
 
 const Navbar = () => {
     return (
@@ -10,7 +9,7 @@ const Navbar = () => {
             <div className="navbar-left">
                 <div className="navbar-logo">
                     <Link to="/">
-                        <img src={logo} alt="TastyBytes Logo" className="navbar-logo-img" />
+                        <img src={`${process.env.PUBLIC_URL}/Images/logo.jpg`} alt="TastyBytes Logo" className="navbar-logo-img" />
                     </Link>
                 </div>
                 <SubmitButton />
@@ -21,7 +20,6 @@ const Navbar = () => {
                 <Link to="/login">Вход</Link>
                 <span> / </span>
                 <Link to="/register">Регистрация</Link>
-      
             </div>
             <div className="navbar-search">
                 <input type="text" placeholder="Поиск..." />
