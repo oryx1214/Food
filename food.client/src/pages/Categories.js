@@ -3,23 +3,24 @@ import './Categories.css';
 
 const Categories = () => {
     const categories = [
-        { name: 'Завтрак', image: '/images/breakfast.jpg' },
-        { name: 'Обед', image: null },
-        { name: 'Ужин', image: null },
-        { name: 'Здоровая еда', image: null },
-        { name: 'Закуски', image: null },
-        { name: 'Десерты', image: null },
-        { name: 'Напитки', image: null },
-        { name: 'Салаты', image: null },
-        { name: 'Выпечка', image: null },
-        { name: 'Вегетарианская еда', image: null },
+        { name: 'Десерты', image: '/images/dessert.png' },   
+        { name: 'Здоровая еда', image: '/images/healthy.png' },      
+        { name: 'Завтрак', image: '/images/breakfast.png' },
+        { name: 'Обед', image: '/images/lunch.png' },
+        { name: 'Ужин', image: '/images/dinner.png' },
+        { name: 'Закуски', image: '/images/snacks.png' },
+        { name: 'Выпечка', image: '/images/baking.png' },
+        { name: 'Напитки', image: '/images/drinks.png' },
+        { name: 'Салаты', image: '/images/salads.png' },
+        
+        { name: 'Вегетарианская еда', image: '/images/vegetarian.png' }
     ];
 
     return (
         <div className="categories-container">
             {categories.map((category, index) => (
                 <div key={index} className="category-card">
-                    {category.image && <img src={process.env.PUBLIC_URL + category.image} alt={category.name} className="category-image" />}
+                    <img src={category.image} alt={category.name} />
                     <h3>{category.name}</h3>
                 </div>
             ))}

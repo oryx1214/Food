@@ -33,12 +33,12 @@ button {
     padding: 10px; /* Внутренний отступ */
     border: none; /* Без границы */
     border-radius: 4px; /* Скругление углов */
-    background-color: #5cb85c; /* Цвет фона кнопки */
+    background-color: #000000; /* Цвет фона кнопки */
     color: white; /* Цвет текста кнопки */
     font-size: 16px; /* Размер шрифта */
     cursor: pointer; /* Указатель курсора */
 }
 
 button:hover {
-    background-color: #4cae4c; /* Цвет фона кнопки при наведении */
+    background-color: #ffee00; /* Цвет фона кнопки при наведении */
 }

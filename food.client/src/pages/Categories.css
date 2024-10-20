@@ -1,32 +1,43 @@
+/* Categories.css */
+
 .categories-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    padding: 20px;
+    gap: 15px;
+    margin: 20px;
 }
 
 .category-card {
-    width: 200px;
-    height: 150px;
+    width: 150px; /* Уменьшаем ширину карточки */
+    height: 180px; /* Задаем высоту карточки */
+    background-color: #f3f3f3;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
+    justify-content: center;
+    padding: 10px;
+    transition: transform 0.3s;
 }
 
 .category-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.category-card img {
+    width: 90%; /* Уменьшаем размер изображения */
+    height: auto; /* Сохраняем пропорции изображения */
+    border-radius: 5px;
+    margin-bottom: 8px;
 }
 
 .category-card h3 {
-    font-size: 18px;
-    color: #333;
+    font-size: 14px; /* Уменьшаем размер текста */
+    font-weight: bold;
     text-align: center;
-    padding: 10px;
+    margin: 0;
+    color: #333;
 }
