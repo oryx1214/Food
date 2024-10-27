@@ -2,33 +2,40 @@
   max-width: 400px; /* Максимальная ширина панели */
   margin: 250px auto; /* Автоматические отступы по бокам и отступ сверху */
   padding: 20px; /* Внутренний отступ */
-  border: 1px solid #ccc; /* Граница */
-  border-radius: 5px; /* Скругление углов */
-  background-color: #f9f9f9; /* Цвет фона */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для панели */
+  border: 1px solid #444; /* Более темная граница */
+  border-radius: 8px; /* Скругление углов */
+  background-color: #333; /* Цвет фона */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Более заметная тень для панели */
 }
 
 h2 {
   text-align: center; /* Центрирование заголовка */
+  color: #fff; /* Цвет текста заголовка */
 }
 
 .form-group {
-  margin-bottom: 5px; /* Отступ между полями */
-  
+  margin-bottom: 15px; /* Увеличенный отступ между полями */
 }
 
 label {
   display: block; /* Метки занимают всю ширину */
   margin-bottom: 5px; /* Отступ снизу */
-  
+  color: #ccc; /* Цвет меток */
 }
 
 input {
   width: calc(100% - 16px); /* Учитываем padding */
-  padding: 8px;
-  border: 1px solid #ccc;
+  padding: 10px;
+  border: 1px solid #555; /* Более темная граница */
   border-radius: 4px;
+  background-color: #2c2c2c; /* Цвет фона для полей ввода */
+  color: #fff; /* Цвет текста в полях */
 }
+
+input::placeholder {
+  color: #aaa; /* Цвет текста плейсхолдера */
+}
+
 button {
   width: 100%; /* Кнопка занимает всю ширину */
   padding: 10px; /* Внутренний отступ */
@@ -39,12 +46,13 @@ button {
   font-size: 16px; /* Размер шрифта */
   cursor: pointer; /* Указатель курсора */
   margin-top: 15px; /* Добавьте этот отступ */
+  transition: background-color 0.3s; /* Плавный переход цвета */
 }
 
 button:hover {
   background-color: #4cae4c; /* Цвет фона кнопки при наведении */
 }
 
-button:active{
-  background-color: #439e43;
+button:active {
+  background-color: #439e43; /* Цвет фона кнопки при нажатии */
 }

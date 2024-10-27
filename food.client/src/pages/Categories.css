@@ -3,41 +3,46 @@
 .categories-container {
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
-    gap: 15px;
-    margin: 20px;
+    padding: 20px;
+}
+
+.category-link {
+    text-decoration: none;
+    color: inherit;
 }
 
 .category-card {
-    width: 150px; /* Уменьшаем ширину карточки */
-    height: 180px; /* Задаем высоту карточки */
-    background-color: #f3f3f3;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 10px;
-    transition: transform 0.3s;
+    width: 169px; /* Увеличим ширину */
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #333; /* Тёмно-серый цвет фона */
+    color: white; /* Белый цвет текста */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
 .category-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .category-card img {
-    width: 90%; /* Уменьшаем размер изображения */
-    height: auto; /* Сохраняем пропорции изображения */
-    border-radius: 5px;
-    margin-bottom: 8px;
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
 }
 
 .category-card h3 {
-    font-size: 14px; /* Уменьшаем размер текста */
+    margin: 15px 0;
+    font-size: 18px;
     font-weight: bold;
     text-align: center;
-    margin: 0;
-    color: #333;
+    color: white; /* Белый текст */
 }

@@ -73,3 +73,30 @@
     max-height: 85px; /* Максимальная высота изображения */
     width: auto; /* Сохранение пропорций изображения */
 }
+.navbar-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-search input {
+    width: 180px;
+    padding: 8px 12px 8px 36px; /* Отступ для иконки */
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, width 0.3s ease;
+}
+
+.navbar-search input:focus {
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 220px;
+}
+
+.navbar-search .search-icon {
+    position: absolute;
+    left: 12px;
+    font-size: 16px;
+    color: #888;
+}

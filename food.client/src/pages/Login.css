@@ -4,7 +4,7 @@
     padding: 20px; /* Внутренний отступ */
     border: 1px solid #ccc; /* Граница */
     border-radius: 5px; /* Скругление углов */
-    background-color: #f9f9f9; /* Цвет фона */
+    background-color: #333; /* Цвет фона */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для панели */
 }
 

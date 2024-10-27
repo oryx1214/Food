@@ -21,7 +21,7 @@ const Register = () => {
       <h2>Регистрация</h2>
       <form onSubmit={handleRegister}>
         <div className="form-group">
-          <label>Email:</label>
+          <label >Email:</label>
           <input
             type="email"
             value={email}
