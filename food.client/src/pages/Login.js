@@ -1,21 +1,34 @@
 import React, { useState } from 'react';
-import './Login.css'; // Импортируем стили
+import './Login.css';
 
 const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
 
-    const handleSubmit = (e) => {
+    console.log(process.env.REACT_APP_API_URL);
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        
-        // Примерная логика для проверки входа
-        if (username === 'user' && password === 'password') {
-            console.log('Успешный вход!');
-            // Здесь можно перенаправить на другую страницу
-            // Например, используя history.push('/dashboard');
-        } else {
-            setErrorMessage('Неверное имя пользователя или пароль');
+
+        try {
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/api/v1/Auth/login`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username, password }),
+            });
+            const data = await response.json();
+
+            if (response.ok) {
+                console.log('Успешный вход:', data);
+                // Перенаправление на другую страницу при успешном входе
+                window.location.href = '/categories';
+            } else {
+                setErrorMessage(data.message || 'Неверное имя пользователя или пароль');
+            }
+        } catch (error) {
+            console.error('Ошибка запроса:', error);
+            setErrorMessage('Не удалось подключиться к серверу');
         }
     };
 
@@ -44,7 +57,7 @@ const Login = () => {
                         required
                     />
                 </div>
-                <button className = "button " type="submit">Вход</button>
+                <button className="button" type="submit">Вход</button>
             </form>
         </div>
     );
