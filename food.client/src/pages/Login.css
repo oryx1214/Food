@@ -39,6 +39,6 @@ button {
     cursor: pointer; /* Указатель курсора */
 }
 
-button:hover {
+.button:hover {
     background-color: #ffee00; /* Цвет фона кнопки при наведении */
 }
