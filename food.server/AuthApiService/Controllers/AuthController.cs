@@ -51,8 +51,7 @@ public class AuthController : ControllerBase
         HttpContext.Response.Cookies.Append("accessToken", resToReturn.accessToken);
         HttpContext.Response.Cookies.Append("refreshToken", resToReturn.refreshToken);
 
-        return Ok(resToReturn);
-
+        return Ok(res);
     }
 
     [AllowAnonymous]

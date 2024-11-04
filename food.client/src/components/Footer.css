@@ -1,17 +1,70 @@
 .footer {
-    background-color: #333; /* Цвет фона */
-    color: white; /* Цвет текста */
-    text-align: center; /* Центрирование текста */
-    padding: 20px; /* Внутренний отступ */
-    position: fixed; /* Фиксированное положение */
-    bottom: 0; /* Внизу страницы */
-    left: 0; /* Слева */
-    right: 0; /* Справа */
-  }
-  
-  .footer-content {
-    display: flex;
-    justify-content: center; /* Центрирование содержимого */
-    align-items: center; /* Выравнивание по вертикали */
-  }
-  
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-contact-section {
+  display: flex;
+  gap: 20px;
+}
+
+.social-group, .contact-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-group span, .contact-group span {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.social-group a, .contact-group a {
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+/* Индивидуальные стили для каждой иконки */
+.icon-instagram {
+  color: #e1306c;
+}
+
+.icon-instagram:hover {
+  color: #bc2a8d;
+}
+
+.icon-facebook {
+  color: #4267B2;
+}
+
+.icon-facebook:hover {
+  color: #365899;
+}
+
+.icon-telegram {
+  color: #0088cc;
+}
+
+.icon-telegram:hover {
+  color: #0078a4;
+}
+
+.icon-whatsapp {
+  color: #25D366;
+}
+
+.icon-whatsapp:hover {
+  color: #128C7E;
+}
