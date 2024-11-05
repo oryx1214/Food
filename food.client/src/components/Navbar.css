@@ -100,3 +100,101 @@
     font-size: 16px;
     color: #888;
 }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    height: 80px;
+    box-sizing: border-box;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    margin-right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-logo a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-links a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.navbar-links a:hover {
+    color: #ffd900;
+    transform: scale(1.1);
+}
+
+.navbar-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-search input {
+    width: 180px;
+    padding: 8px 12px 8px 36px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, width 0.3s ease;
+}
+
+.navbar-search input:focus {
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 220px;
+}
+
+.navbar-search .search-icon {
+    position: absolute;
+    left: 12px;
+    font-size: 16px;
+    color: #888;
+}
+
+.submit-button {
+    margin-left: 10px;
+}
+
+.search-button {
+    margin-left: 1px;
+    margin-top: 5px;
+    background-color: #fad400;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #ffd900;
+    color: white;
+}
+
+.search-button:active {
+    background-color: #fcc100;
+    color: white;
+}
+
+.navbar-logo img {
+    max-height: 50px; /* Сделаем логотип отзывчивым */
+    width: auto;
+}

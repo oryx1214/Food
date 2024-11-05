@@ -17,6 +17,9 @@ const Navbar = () => {
             <div className="navbar-links">
                 <Link to="/">Главная</Link>
                 <Link to="/categories">Категории</Link>
+                <Link to="/favorites">Избранное</Link>
+                <Link to="/about">О нас</Link>
+                <Link to="/contact">Контакты</Link>
                 <Link to="/login">Вход</Link>
                 <span> / </span>
                 <Link to="/register">Регистрация</Link>
@@ -25,6 +28,8 @@ const Navbar = () => {
                 <input type="text" placeholder="Поиск..." />
                 <button className="search-button">Найти</button>
             </div>
+
+            
         </nav>
     );
 };

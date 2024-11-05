@@ -25,7 +25,7 @@ public class AuthService : IAuthService
         this.blackListService = blackListService;
     }
 
-    public async Task<User> LoginUserAsync(LoginDTO user)
+    public async Task<AccessInfo_DTO> LoginUserAsync(LoginDTO user)
     {
         try
         {
@@ -58,7 +58,7 @@ public class AuthService : IAuthService
 
             await context.SaveChangesAsync();
 
-            return foundUser;
+            return tokenData;
         }
         catch
         {
@@ -135,7 +135,7 @@ public class AuthService : IAuthService
             await context.Users.AddAsync(newUser);
             await context.SaveChangesAsync();
 
-            var role = await context.AppRoles.Where(x => x.Name == "Petux").FirstOrDefaultAsync();
+            var role = await context.AppRoles.Where(x => x.Name == "AppUser").FirstOrDefaultAsync();
 
             var roleToApply = new UserRole()
             {

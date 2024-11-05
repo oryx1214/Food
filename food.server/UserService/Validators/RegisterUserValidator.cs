@@ -11,7 +11,7 @@ public class RegisterUserValidator : AbstractValidator<RegisterDTO>
         RuleFor(x => x.Username)
             .NotEmpty()
             .WithMessage("Username is required")
-            
+            .Matches(RegexPatterns.usernamePattern)
             .When(x => x.Username != null);
 
         RuleFor(x => x.Email)
@@ -23,6 +23,7 @@ public class RegisterUserValidator : AbstractValidator<RegisterDTO>
         RuleFor(x => x.Password)
             .NotEmpty()
             .WithMessage("Password is required")
+            .Matches(RegexPatterns.passwordPattern)
             .NotEqual(x => x.Username)
             .When(x => x.Password != null);
 

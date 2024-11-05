@@ -21,9 +21,8 @@ const Login = () => {
             
             if (response.ok) {
                 console.log('Успешный вход:', data);
-                alert(`Hello, ${data.username}, you are ${data.role}`)
                 // Перенаправление на другую страницу при успешном входе
-                // window.location.href = '/categories';
+                window.location.href = '/categories';
             } else {
                 setErrorMessage(data.message || 'Неверное имя пользователя или пароль');
             }
