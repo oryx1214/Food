@@ -1,58 +1,58 @@
 .register-container {
-  max-width: 400px; /* Максимальная ширина панели */
-  margin: 250px auto; /* Автоматические отступы по бокам и отступ сверху */
-  padding: 20px; /* Внутренний отступ */
-  border: 1px solid #444; /* Более темная граница */
-  border-radius: 8px; /* Скругление углов */
-  background-color: #333; /* Цвет фона */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Более заметная тень для панели */
+  max-width: 400px;
+  margin: 250px auto;
+  padding: 20px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  background-color: #333;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 h2 {
-  text-align: center; /* Центрирование заголовка */
-  color: #fff; /* Цвет текста заголовка */
+  text-align: center;
+  color: #fff;
 }
 
 .form-group {
-  margin-bottom: 15px; /* Увеличенный отступ между полями */
+  margin-bottom: 15px;
 }
 
 label {
-  display: block; /* Метки занимают всю ширину */
-  margin-bottom: 5px; /* Отступ снизу */
-  color: #ccc; /* Цвет меток */
+  display: block;
+  margin-bottom: 5px;
+  color: #ccc;
 }
 
 input {
-  width: calc(100% - 16px); /* Учитываем padding */
+  width: calc(100% - 16px);
   padding: 10px;
-  border: 1px solid #555; /* Более темная граница */
+  border: 1px solid #555;
   border-radius: 4px;
-  background-color: #2c2c2c; /* Цвет фона для полей ввода */
-  color: #fff; /* Цвет текста в полях */
+  background-color: #2c2c2c;
+  color: #fff;
 }
 
 input::placeholder {
-  color: #aaa; /* Цвет текста плейсхолдера */
+  color: #aaa;
 }
 
 button {
-  width: 100%; /* Кнопка занимает всю ширину */
-  padding: 10px; /* Внутренний отступ */
-  border: none; /* Без границы */
-  border-radius: 4px; /* Скругление углов */
-  background-color: #5cb85c; /* Цвет фона кнопки */
-  color: white; /* Цвет текста кнопки */
-  font-size: 16px; /* Размер шрифта */
-  cursor: pointer; /* Указатель курсора */
-  margin-top: 15px; /* Добавьте этот отступ */
-  transition: background-color 0.3s; /* Плавный переход цвета */
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #5cb85c;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: #4cae4c; /* Цвет фона кнопки при наведении */
+  background-color: #4cae4c;
 }
 
 button:active {
-  background-color: #439e43; /* Цвет фона кнопки при нажатии */
+  background-color: #439e43;
 }

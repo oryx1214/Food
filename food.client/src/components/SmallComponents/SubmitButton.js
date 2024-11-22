@@ -1,13 +1,15 @@
 import React from 'react';
-import './SubmitButton.css'; // Убедись, что этот импорт соответствует правильному названию файла
+import { Link } from 'react-router-dom';
+import './SubmitButton.css';
 
 const SubmitButton = () => {
     return (
-        <button className="submit-button">
-            Отправить рецепт
-            <span className="plus-icon">+</span>
-            
-        </button>
+        <Link to="/add-recipe" className="submit-link">
+            <button className="submit-button">
+                Отправить рецепт
+                <span className="plus-icon">+</span>
+            </button>
+        </Link>
     );
 };
 

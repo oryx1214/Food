@@ -6,38 +6,45 @@ const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [error, setError] = useState(''); // Состояние для ошибки
+  const [success, setSuccess] = useState(''); 
 
   const handleRegister = async (e) => {
     e.preventDefault();
 
     // Проверяем совпадение паролей
     if (password !== confirmPassword) {
-      alert('Пароли не совпадают');
+      setError('Пароли не совпадают');
       return;
     }
 
-    // Проверяем значение переменной окружения
-    console.log("API URL:", process.env.REACT_APP_API_URL); // Добавляем лог для проверки API URL
+    console.log("API URL:", process.env.REACT_APP_API_URL); 
 
     try {
-      // Выполняем запрос на регистрацию
       const response = await fetch(`${process.env.REACT_APP_API_URL}/api/v1/Auth/Register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username: name, email, password, confirmPassword }), // Добавляем имя в запрос
+        body: JSON.stringify({ username: name, email, password, confirmPassword }), 
       });
 
       const data = await response.json();
 
-      // Обрабатываем ответ сервера
+      
       if (response.ok) {
-        console.log('Регистрация успешна:', data);
+        setSuccess('Регистрация успешна! Пожалуйста, войдите.');
+        setError(''); 
+        setName('');
+        setEmail('');
+        setPassword('');
+        setConfirmPassword('');
       } else {
-        alert(data.message || 'Ошибка при регистрации');
+        setError(data.message || 'Ошибка при регистрации');
+        setSuccess(''); // Очищаем успешное сообщение
       }
     } catch (error) {
       console.error('Ошибка запроса:', error);
-      alert('Не удалось подключиться к серверу');
+      setError('Не удалось подключиться к серверу');
+      setSuccess(''); // Очищаем успешное сообщение
     }
   };
 
@@ -83,6 +90,12 @@ const Register = () => {
         </div>
         <button type="submit">Зарегистрироваться</button>
       </form>
+
+      {/* Показываем сообщение об успехе, если оно есть */}
+      {success && <div className="success-message">{success}</div>}
+
+      {/* Показываем ошибку, если она есть */}
+      {error && <div className="error-message">{error}</div>}
     </div>
   );
 };

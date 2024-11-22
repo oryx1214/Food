@@ -1,44 +1,62 @@
 .login-container {
-    max-width: 400px; /* Максимальная ширина панели */
-    margin: 250px auto; /* Автоматические отступы по бокам и отступ сверху */
-    padding: 20px; /* Внутренний отступ */
-    border: 1px solid #ccc; /* Граница */
-    border-radius: 5px; /* Скругление углов */
-    background-color: #333; /* Цвет фона */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для панели */
+    max-width: 400px;
+    margin: 250px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #333;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    text-align: center; /* Центрирование заголовка */
+    text-align: center;
 }
 
 .form-group {
-    margin-bottom: 15px; /* Отступ между полями */
+    margin-bottom: 15px;
 }
 
 label {
-    display: block; /* Метки занимают всю ширину */
-    margin-bottom: 5px; /* Отступ снизу */
+    display: block;
+    margin-bottom: 5px;
 }
 
 input {
-    width: 100%; /* Поля ввода занимают всю ширину */
-    padding: 8px; /* Внутренний отступ */
-    border: 1px solid #ccc; /* Граница */
-    border-radius: 4px; /* Скругление углов */
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 button {
-    width: 100%; /* Кнопка занимает всю ширину */
-    padding: 10px; /* Внутренний отступ */
-    border: none; /* Без границы */
-    border-radius: 4px; /* Скругление углов */
-    background-color: #000000; /* Цвет фона кнопки */
-    color: white; /* Цвет текста кнопки */
-    font-size: 16px; /* Размер шрифта */
-    cursor: pointer; /* Указатель курсора */
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #000000;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .button:hover {
-    background-color: #ffee00; /* Цвет фона кнопки при наведении */
+    background-color: #ffee00;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
 }

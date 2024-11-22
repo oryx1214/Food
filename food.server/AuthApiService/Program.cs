@@ -103,7 +103,7 @@ builder.Services.AddSwaggerGen(options =>
 
 builder.Services.AddDbContext<AuthContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("auth_bsite"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Auth-Db"));
 });
 
 builder.Services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();

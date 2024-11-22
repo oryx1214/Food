@@ -1,11 +1,12 @@
 .navbar {
     display: flex;
-    justify-content: space-between; /* Равномерное распределение элементов */
+    justify-content: space-between; 
     align-items: center;
     padding: 10px 20px;
     background-color: #333;
+    
     color: white;
-    height: 80px; /* Фиксированная высота для Navbar */
+    height: 80px; 
     box-sizing: border-box;
 }
 
@@ -50,7 +51,7 @@
 }
 
 .submit-button {
-    margin-left: 10px; /* Немного отступа между логотипом и кнопкой */
+    margin-left: 20px; 
 }
 
 .search-button   {
@@ -66,12 +67,12 @@
 }
 
 .search-button:active {
-    background-color: #fcc100; /* Более темный зеленый цвет */
+    background-color: #fcc100; 
     color: white;
 }
 .navbar-logo img {
-    max-height: 85px; /* Максимальная высота изображения */
-    width: auto; /* Сохранение пропорций изображения */
+    max-height: 85px; 
+    width: auto; 
 }
 .navbar-search {
     position: relative;
@@ -81,7 +82,7 @@
 
 .navbar-search input {
     width: 180px;
-    padding: 8px 12px 8px 36px; /* Отступ для иконки */
+    padding: 8px 12px 8px 36px; 
     border: 1px solid #ddd;
     border-radius: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -172,9 +173,6 @@
     color: #888;
 }
 
-.submit-button {
-    margin-left: 10px;
-}
 
 .search-button {
     margin-left: 1px;
@@ -195,6 +193,6 @@
 }
 
 .navbar-logo img {
-    max-height: 50px; /* Сделаем логотип отзывчивым */
+    max-height: 50px; 
     width: auto;
 }

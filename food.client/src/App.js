@@ -1,7 +1,8 @@
 import './App.css';
 import { Outlet, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer'; 
+import Footer from './components/Footer';
+import AddRecipe from './pages/AddRecipe'; // Добавляем компонент для добавления рецепта
 
 function App() {
   const location = useLocation(); // Получаем текущий путь
@@ -15,7 +16,9 @@ function App() {
         <Navbar />
       </header>
       <div className="App">
-        <Outlet />
+        <div className="content-container">
+          {location.pathname === '/add-recipe' ? <AddRecipe /> : <Outlet />}
+        </div>
       </div>
       {/* Условное отображение футера */}
       {!hideFooterPaths.includes(location.pathname) && <Footer />}
