@@ -19,7 +19,7 @@ function Footer() {
           
           <div className="social-group">
             <span>Следите за нами:</span>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="icon-instagram">
+            <a href="https://www.instagram.com/mmdv_5/ " target="_blank" rel="noopener noreferrer" className="icon-instagram">
               <FontAwesomeIcon icon={faInstagram} />
             </a>
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="icon-facebook">

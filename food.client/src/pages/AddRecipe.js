@@ -6,7 +6,7 @@ const AddRecipe = () => {
   const [category, setCategory] = useState('');
   const [difficulty, setDifficulty] = useState('');
   const [image, setImage] = useState(null);
-  const [steps, setSteps] = useState(['']); 
+  const [steps, setSteps] = useState(['']);
   const [successMessage, setSuccessMessage] = useState('');
 
   const handleImageUpload = (e) => {
@@ -20,11 +20,11 @@ const AddRecipe = () => {
   };
 
   const addStep = () => {
-    setSteps([...steps, '']); 
+    setSteps([...steps, '']);
   };
 
   const removeStep = (index) => {
-    if (steps.length > 1) { 
+    if (steps.length > 1) {
       const updatedSteps = steps.filter((_, i) => i !== index);
       setSteps(updatedSteps);
     }
@@ -32,7 +32,6 @@ const AddRecipe = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Логика для отправки данных
     setSuccessMessage('Рецепт успешно загружен!');
   };
 
@@ -89,7 +88,7 @@ const AddRecipe = () => {
         </div>
         <div className="input-field">
           <label htmlFor="recipe-image">Фото рецепта:</label>
-          <input type="file" id="recipe-image" onChange={handleImageUpload} />
+          <input className = "fff"type="file" id="recipe-image" onChange={handleImageUpload} />
         </div>
         <div className="input-field">
           <label>Шаги приготовления:</label>
@@ -103,7 +102,7 @@ const AddRecipe = () => {
                   placeholder={`Шаг ${index + 1}`}
                   required
                 />
-                {steps.length > 1 && ( 
+                {steps.length > 1 && index !== steps.length - 1 && (
                   <button
                     type="button"
                     className="remove-step-button"
@@ -114,14 +113,14 @@ const AddRecipe = () => {
                 )}
               </div>
             ))}
-            <button
-              type="button"
-              className="add-step-button"
-              onClick={addStep}
-            >
-              Добавить шаг
-            </button>
           </div>
+          <button
+            type="button"
+            className="add-step-button"
+            onClick={addStep}
+          >
+            Добавить шаг
+          </button>
         </div>
         <button type="submit" className="submit-recipe-button">
           Загрузить рецепт
