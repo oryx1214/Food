@@ -49,11 +49,18 @@ const Register = () => {
   };
 
   return (
+
     <div className="register-container">
+         <a href="/" className="back-button" aria-label="Вернуться на главную">
+         ⇽</a>
+
+      
       <h2>Регистрация</h2>
       <form onSubmit={handleRegister}>
         <div className="form-group">
+          
           <label>Имя:</label>
+          
           <input
             type="text"
             value={name}

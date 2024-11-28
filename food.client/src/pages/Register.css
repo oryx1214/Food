@@ -56,3 +56,44 @@ button:hover {
 button:active {
   background-color: #439e43;
 }
+.success {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+}
+
+.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+}
+.back-button {
+  position: absolute;
+  top: 10px; /* Расположить кнопку в верхней части */
+  left: 10px; /* Сместить кнопку немного от левого края */
+  font-size: 20px; /* Размер текста */
+  color: #333; /* Цвет текста */
+  text-decoration: none; /* Убрать подчёркивание */
+  background-color: #ffffff; /* Фон кнопки */
+  border: 1px solid #ccc; /* Граница кнопки */
+  border-radius: 50%; /* Круглая кнопка */
+  width: 40px; /* Ширина кнопки */
+  height: 40px; /* Высота кнопки */
+  display: flex; /* Для центрирования стрелки */
+  align-items: center; /* Центрирование по вертикали */
+  justify-content: center; /* Центрирование по горизонтали */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+  transition: all 0.3s ease; /* Анимация при наведении */
+}
+
+.back-button:hover {
+  background-color: #e0e0e0; /* Цвет при наведении */
+  transform: scale(1.1); /* Увеличение кнопки при наведении */
+  color: #000; /* Изменение цвета стрелки */
+}
