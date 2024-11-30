@@ -30,9 +30,41 @@ const AddRecipe = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSuccessMessage('Рецепт успешно загружен!');
+
+    // Создаем объект FormData для отправки данных
+    const formData = new FormData();
+    formData.append("Name", recipeName);
+    formData.append("Category", category);
+    formData.append("Difficulty", difficulty);
+    formData.append("Steps", JSON.stringify(steps)); // Преобразуем шаги в строку JSON
+    if (image) {
+      formData.append("Image", image); // Добавляем файл изображения
+    }
+
+    try {
+      // Отправляем запрос на сервер
+      const response = await fetch("https://localhost:7045/api/recipe", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        setSuccessMessage('Рецепт успешно загружен!');
+        // После успешной загрузки, очищаем форму
+        setRecipeName('');
+        setCategory('');
+        setDifficulty('');
+        setImage(null);
+        setSteps(['']);
+      } else {
+        setSuccessMessage('Ошибка при загрузке рецепта');
+      }
+    } catch (error) {
+      setSuccessMessage('Произошла ошибка, попробуйте снова');
+      console.error("Error:", error);
+    }
   };
 
   return (
@@ -67,6 +99,7 @@ const AddRecipe = () => {
             <option value="dinner">Ужин</option>
             <option value="snack">Закуски</option>
             <option value="dessert">Десерт</option>
+            
           </select>
         </div>
         <div className="input-field">
@@ -88,7 +121,7 @@ const AddRecipe = () => {
         </div>
         <div className="input-field">
           <label htmlFor="recipe-image">Фото рецепта:</label>
-          <input className = "fff"type="file" id="recipe-image" onChange={handleImageUpload} />
+          <input className="fff" type="file" id="recipe-image" onChange={handleImageUpload} />
         </div>
         <div className="input-field">
           <label>Шаги приготовления:</label>
@@ -114,11 +147,7 @@ const AddRecipe = () => {
               </div>
             ))}
           </div>
-          <button
-            type="button"
-            className="add-step-button"
-            onClick={addStep}
-          >
+          <button type="button" className="add-step-button" onClick={addStep}>
             Добавить шаг
           </button>
         </div>
